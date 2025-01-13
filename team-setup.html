@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+	<title>Створення команди</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250113104344">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<div class="header__images">
+					<a href="#" class="header__logo">
+						<img src="img/header/logo.svg" alt="Image" class="ibg ibg--contain">
+					</a>
+				</div>
+				<div class="header__menu">
+					<div class="header__block">
+						<!--Активному пукнту додати клас _active-->
+						<a href="#" class="header__link button _icon-ch-right">
+							<span>Заявити команду</span>
+						</a>
+						<a href="#" class="header__link button _icon-ch-right">
+							<span>Заявка гравця</span>
+						</a>
+					</div>
+					<div data-da=".header__images, 767.98, last" class="header__city">
+						КИЇВ
+						<img src="img/header/kyiv.webp" alt="Image" class="ibg ibg--contain">
+					</div>
+					<div class="header__block">
+						<a href="#" class="header__link button button--transparent _icon-user-add">
+							<span>Реєстрація</span>
+						</a>
+						<a href="#" class="header__link button button--transparent _icon-user-circle">
+							<span>Профіль</span>
+						</a>
+					</div>
+				</div>
+				<div class="header__actions">
+					<div class="header__profile profile-header">
+						<div class="profile-header__image">
+							<img src="img/header/profile.webp" alt="Image" class="ibg">
+						</div>
+						<div class="profile-header__label">
+							0.00 грн
+						</div>
+						<button class="profile-header__add _icon-add-circle">
+						</button>
+					</div>
+					<div class="header__contacts">
+						<a href="#" class="header__phone">+38(093) 431 94 92</a>
+						<div class="header__social social">
+							<a href="#" class="social__item _icon-s-fb">
+							</a>
+							<a href="#" class="social__item _icon-s-inst">
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="page">
+			<div class="page__nav nav">
+				<div class="nav__container">
+					<div class="nav__images">
+						<img src="img/navigation/01.webp" alt="Image" class="ibg ibg--contain">
+						<img src="img/navigation/02.webp" alt="Image" class="ibg ibg--contain">
+						<img src="img/navigation/03.webp" alt="Image" class="ibg ibg--contain">
+					</div>
+					<div data-simplebar class="nav__body">
+						<ul class="nav__list">
+							<!--Активному пукнту додати клас _active-->
+							<li>
+								<a href="#">
+									Головна
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Місто
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Таблиці
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Календар
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Команди
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Стадіони
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Регламент
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Архів
+								</a>
+							</li>
+						</ul>
+					</div>
+
+				</div>
+			</div>
+			<div class="page__container">
+				<div class="page__wrapper">
+					<div class="page__team-setup team-setup">
+						<div class="team-setup__block _block">
+							<div class="team-setup__name">
+								<div class="team-setup__label team-setup__label--big">
+									НАЗВА КОМАНДИ
+								</div>
+								<input type="text" value="SOBORNA TEAM" name="name" class="team-setup__input">
+							</div>
+							<div class="team-setup__logo">
+								<div class="team-setup__image">
+									<img src="img/header/logo.svg" alt="Logo" class="ibg ibg--contain">
+								</div>
+								<label class="team-setup__upload button button--blue">
+									<input type="file" name="logo" accept="image.webp, image.webp, image/svg+xml" />
+									<span>Завантажити ЛОГОТИП</span>
+								</label>
+							</div>
+							<div class="team-setup__footer">
+								<div class="team-setup__field">
+									<div class="team-setup__label">
+										ВИБРАТИ КОЛІР КОМАНДИ
+									</div>
+									<div class="team-setup__colors">
+										<label style="--color: #8593a0" class="team-setup__color">
+											<input disabled type="radio" name="team-color">
+										</label>
+										<label style="--color: #FF3B3B" class="team-setup__color">
+											<input type="radio" name="team-color">
+										</label>
+										<label style="--color: #59C65D" class="team-setup__color">
+											<input type="radio" name="team-color">
+										</label>
+										<label style="--color: #1B5BA2" class="team-setup__color">
+											<input disabled type="radio" name="team-color">
+										</label>
+										<label style="--color: #F7E10E" class="team-setup__color">
+											<input disabled type="radio" name="team-color">
+										</label>
+										<label style="--color: #FF7F27" class="team-setup__color">
+											<input type="radio" name="team-color">
+										</label>
+									</div>
+								</div>
+								<div class="team-setup__field">
+									<div class="team-setup__label">
+										ПРОМОКОД
+									</div>
+									<div class="team-setup__code-input input-code">
+										<input type="text" maxlength="1" />
+										<input type="text" maxlength="1" />
+										<input type="text" maxlength="1" />
+										<input type="text" maxlength="1" />
+									</div>
+								</div>
+								<div class="team-setup__field">
+									<div class="team-setup__label">
+										ВНЕСОК: <span>650 ГРН</span>
+									</div>
+									<button type="button" class="team-setup__pay-button button button--blue">
+										Оплатити внесок
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<button class="up-button">
+			<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none">
+				<path d="M0 17.76C0 7.14 6.84 0 17.01 0H43.02C53.187 0 60 7.14 60 17.76V42.27C60 52.86 53.187 60 43.02 60H17.01C6.84 60 0 52.86 0 42.27L0 17.76ZM17.16 27.45C16.29 28.32 16.29 29.76 17.16 30.63C18.06 31.5 19.47 31.5 20.37 30.63L27.75 23.19L27.75 42.24C27.75 43.5 28.77 44.49 30 44.49C31.26 44.49 32.25 43.5 32.25 42.24V23.19L39.66 30.63C40.08 31.05 40.68 31.29 41.25 31.29C41.817 31.29 42.39 31.05 42.84 30.63C43.71 29.76 43.71 28.32 42.84 27.45L31.59 16.14C30.75 15.3 29.25 15.3 28.41 16.14L17.16 27.45Z" fill="#0053A0" />
+			</svg>
+		</button>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js?_v=20250113104344"></script>
+	<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js?_v=20250113104344"></script>
+	<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js?_v=20250113104344"></script>
+	<script src="js/app.min.js?_v=20250113104344"></script>
+</body>
+
+</html>
