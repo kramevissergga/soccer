@@ -18,6 +18,9 @@
   -moz-osx-font-smoothing: grayscale;
   display: block
 }
+._icon-star:before {
+  content: ""
+}
 ._icon-field:before {
   content: ""
 }
@@ -209,7 +212,8 @@ body::after {
   width: 1.1875rem;
   height: 1.1875rem;
   position: relative;
-  transition: all .3s
+  transition: all .3s;
+  cursor: pointer
 }
 .rating__item svg {
   stroke: var(--color,#0053a0);
@@ -317,6 +321,10 @@ body::after {
 .green-bg {
   background-color: #59c65d
 }
+.filter-block {
+  display: grid;
+  gap: .5rem .625rem
+}
 .section-title {
   color: #0a2640;
   text-align: center;
@@ -370,6 +378,10 @@ body::after {
 }
 .button--blue {
   background-color: #0053a0;
+  color: #fff
+}
+.button--green {
+  background-color: #59c65d;
   color: #fff
 }
 .button._active {
@@ -573,6 +585,27 @@ body::after {
 .item-player--stats .item-player__info img {
   width: .546875rem;
   height: .546875rem
+}
+.upload-btn {
+  position: relative;
+  cursor: pointer
+}
+.upload-btn input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0
+}
+.input {
+  padding: 1rem;
+  color: #0a2640;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: .025rem;
+  text-transform: uppercase;
+  border-radius: .5rem;
+  border: .0625rem solid rgba(10,38,64,.2)
 }
 .header {
   padding: 1.375rem 0;
@@ -1155,11 +1188,6 @@ body::after {
   min-width: 0;
   flex-shrink: 0
 }
-.bid__filter {
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
-  gap: .625rem
-}
 .item-bid {
   padding: 1rem .5rem;
   border-radius: .5rem;
@@ -1331,6 +1359,87 @@ body::after {
   line-height: 1.2;
   text-transform: uppercase
 }
+.schedule__filter:not(:last-child) {
+  margin-bottom: 1.375rem
+}
+.schedule__items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center
+}
+.schedule__item {
+  flex: 0 0 auto
+}
+.item-schedule {
+  border-radius: .2375rem;
+  overflow: hidden;
+  border: .0625rem solid rgba(10,38,64,.1)
+}
+.item-schedule__header {
+  padding: .5rem .875rem;
+  background: #0a2640;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+  font-size: .75rem;
+  gap: .125rem;
+  font-weight: 700
+}
+.item-schedule__body {
+  padding: .5625rem
+}
+.item-schedule__block:not(:last-child) {
+  margin-bottom: .125rem
+}
+.item-schedule__info {
+  display: flex;
+  gap: .125rem
+}
+.item-schedule__info:not(:last-child) {
+  margin-bottom: .125rem
+}
+.item-schedule__info span {
+  display: block;
+  flex-grow: 1;
+  padding: .125rem .25rem;
+  color: #fff;
+  text-align: center;
+  font-size: .625rem;
+  font-weight: 700;
+  text-transform: x uppercase;
+  border-radius: .125rem;
+  background-color: #0a2640
+}
+.item-schedule__label {
+  color: #0a2640;
+  text-align: center;
+  display: flex;
+  gap: .125rem
+}
+.item-schedule__label::before {
+  content: "";
+  border-radius: .125rem;
+  background: var(--color,#004aa0);
+  width: 1.125rem;
+  height: 1.125rem
+}
+.item-schedule__label:not(:last-child) {
+  margin-bottom: .125rem
+}
+.item-schedule__label span {
+  font-size: .625rem;
+  flex-grow: 1;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: .125rem;
+  background: rgba(10,38,64,.1);
+  padding: .125rem .375rem
+}
 .team-setup__block {
   display: flex;
   flex-direction: column
@@ -1381,16 +1490,7 @@ body::after {
 }
 .team-setup__upload {
   padding-left: .9375rem;
-  padding-right: .9375rem;
-  position: relative;
-  cursor: pointer
-}
-.team-setup__upload input {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 0
+  padding-right: .9375rem
 }
 .team-setup__footer {
   display: flex;
@@ -1472,8 +1572,12 @@ body::after {
   flex-direction: column;
   align-items: center;
   gap: .5rem;
+  transition: all .3s;
   border-radius: .25rem;
   border: .0625rem solid rgba(10,38,64,.1)
+}
+.team-card._active {
+  border-color: #0053a0
 }
 .team-card__name {
   color: #0a2640;
@@ -1490,6 +1594,13 @@ body::after {
   width: .5125rem;
   height: .5125rem;
   flex-basis: .5125rem
+}
+.team-card__label {
+  color: rgba(10,38,64,.5);
+  text-align: center;
+  font-weight: 700;
+  line-height: 1.2;
+  text-transform: uppercase
 }
 .hero-team__card {
   padding: 1rem .625rem;
@@ -1743,6 +1854,9 @@ body::after {
 .hero-tournament__label--small {
   font-size: 1rem
 }
+.hero-tournament__label--big {
+  font-size: 1.5rem
+}
 .hero-tournament__label span {
   color: rgba(10,38,64,.5)
 }
@@ -1764,6 +1878,17 @@ body::after {
   width: 1.6875rem;
   height: 1.6875rem;
   flex-basis: 1.6875rem
+}
+.hero-tournament__button {
+  font-size: .875rem;
+  padding: .4375rem 1.125rem;
+  width: 100%;
+  max-width: 12.5rem
+}
+.hero-tournament__image {
+  border-radius: 1.0625rem;
+  overflow: hidden;
+  aspect-ratio: 1/1
 }
 .schedule-tournament__body:not(:last-child) {
   margin-bottom: 1.375rem
@@ -1847,7 +1972,7 @@ body::after {
   gap: .25rem;
   counter-increment: position-counter
 }
-.players-tournament__label {
+.players-tournament__text {
   color: rgba(10,38,64,.5);
   text-align: center;
   font-weight: 700;
@@ -1914,7 +2039,7 @@ body::after {
   padding: 0 .625rem;
   text-transform: uppercase
 }
-.players-tournament__offer-btn {
+.players-tournament__label {
   color: #fff;
   text-align: center;
   font-weight: 800;
@@ -1923,8 +2048,30 @@ body::after {
   font-size: .48125rem;
   border-radius: .25rem;
   transition: all .3s;
-  padding: .3125rem .1875rem;
-  background: rgba(10,38,64,.5)
+  padding: .3125rem .1875rem
+}
+.players-tournament__info {
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(11.875rem,1fr));
+  gap: .625rem 1rem
+}
+.players-tournament__info-item {
+  padding: 1rem;
+  border-radius: .25rem;
+  border: .0625rem solid rgba(10,38,64,.1);
+  color: rgba(10,38,64,.5);
+  font-size: .75rem;
+  font-weight: 700;
+  line-height: 1.6;
+  letter-spacing: .015rem;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem
+}
+.players-tournament__info-item::before {
+  color: #0053a0;
+  font-size: .5rem
 }
 .price-tournament__body {
   display: grid;
@@ -1951,6 +2098,211 @@ body::after {
 .price-tournament__block:nth-child(even) .price-tournament__item span {
   background-color: rgba(10,38,64,.5);
   color: #fff
+}
+.reg-tournament__body {
+  counter-reset: reg-item
+}
+.reg-tournament__body:not(:last-child) {
+  margin-bottom: 1.375rem
+}
+.reg-tournament__item {
+  counter-increment: reg-item;
+  display: flex;
+  gap: .125rem;
+  padding-left: .375rem;
+  position: relative
+}
+.reg-tournament__item::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: .1875rem;
+  border-radius: .125rem;
+  background-color: var(--color,#004aa0);
+  top: 0;
+  left: 0
+}
+.reg-tournament__item:not(:last-child) {
+  margin-bottom: .125rem
+}
+.reg-tournament__item::before {
+  content: counter(reg-item);
+  color: #0a2640;
+  font-weight: 700;
+  padding: .625rem .875rem;
+  border-radius: .25rem;
+  background-color: #f2f6fa;
+  min-width: 2.625rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+.reg-tournament__label {
+  color: #0a2640;
+  font-weight: 700;
+  padding: .625rem .875rem;
+  border-radius: .25rem;
+  background-color: #f2f6fa;
+  flex-grow: 1;
+  display: flex;
+  align-items: center
+}
+.reg-tournament__rating {
+  padding: .8125rem .875rem;
+  border-radius: .25rem;
+  background: rgba(10,38,64,.5);
+  display: flex;
+  align-items: center
+}
+.reg-tournament__rating .rating__item:not(.rating__item--active) svg {
+  fill: none
+}
+.reg-tournament__actions {
+  display: grid;
+  gap: .5rem 1.375rem
+}
+.profile__hero .hero-tournament__info {
+  padding-bottom: .625rem
+}
+.profile__hero .hero-tournament__info .hero-tournament__rating .rating__item {
+  width: 1.75rem;
+  height: 1.75rem;
+  flex-basis: 1.75rem
+}
+.profile__hero .hero-tournament__label {
+  color: rgba(10,38,64,.5)
+}
+.profile__hero .hero-tournament__label span {
+  color: #0a2640
+}
+.teams-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center
+}
+.teams-profile__items {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 1.375rem
+}
+.teams-profile__item {
+  padding: 1rem;
+  gap: .5rem
+}
+.teams-profile__item .team-card__name {
+  font-size: 1rem
+}
+.teams-profile__item .team-card__name:not(:last-child) {
+  margin-bottom: .5rem
+}
+.teams-profile__item .rating__item {
+  width: .7125rem;
+  height: .7125rem;
+  flex-basis: .7125rem
+}
+.teams-profile__item .team-card__logo {
+  max-width: 9rem
+}
+.teams-profile__item .team-card__logo:not(:last-child) {
+  margin-bottom: .5rem
+}
+.teams-profile__setup .team-card {
+  padding: 2.1875rem 2.625rem;
+  gap: 1rem
+}
+.teams-profile__setup .team-card__name {
+  font-size: 1rem
+}
+.teams-profile__setup .team-card__logo {
+  max-width: 9rem
+}
+.teams-profile__setup .team-card:not(:last-child) {
+  margin-bottom: 1rem
+}
+.teams-profile__button {
+  width: 100%
+}
+.teams-profile__button:not(:last-child) {
+  margin-bottom: .5rem
+}
+.account__hero {
+  display: grid;
+  grid-template-columns: 285fr 340fr;
+  gap: 5.25rem
+}
+.account__field {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  width: 100%
+}
+.account__label {
+  color: rgba(10,38,64,.5);
+  font-weight: 700;
+  letter-spacing: .02rem;
+  text-transform: uppercase
+}
+.account__upload {
+  border-radius: .5rem;
+  border: .0625rem solid rgba(10,38,64,.05);
+  background: rgba(10,38,64,.05);
+  color: #0a2640;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: .025rem;
+  text-transform: uppercase;
+  aspect-ratio: 1/1;
+  transition: background-color .3s;
+  padding: 3.125rem;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+.account__body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.375rem
+}
+.account__date {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: .5rem
+}
+.account__date .input {
+  text-align: center
+}
+.account__rating .rating__item {
+  width: 2.25rem;
+  height: 2.25rem;
+  flex-basis: 2.25rem
+}
+.account__rating .rating__item:not(.rating__item--active) svg {
+  fill: none
+}
+.account__data {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 1.375rem 1.8125rem
+}
+.account__card-col {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: .5rem
+}
+.account__button {
+  grid-column: 1/-1;
+  font-size: 1.25rem
+}
+.account__rating-block {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: .25rem
+}
+.account__rating-block:not(:last-child) {
+  margin-bottom: 1.875rem
 }
 [data-simplebar] {
   position: relative;
@@ -2158,8 +2510,14 @@ body::after {
   .table-section__table th:has(.team) {
     width: 100%
   }
+  .reg-tournament__actions {
+    grid-template-columns: repeat(2,1fr)
+  }
 }
 @media (min-width:31.24875em) {
+  .filter-block {
+    grid-template-columns: repeat(2,1fr)
+  }
   .hero-team__body {
     display: grid;
     grid-template-columns: 10rem 1fr;
@@ -2280,6 +2638,37 @@ body::after {
   .players-tournament__progress {
     padding: 0 1.375rem
   }
+  .reg-tournament__item::before {
+    font-size: 1rem
+  }
+  .reg-tournament__label {
+    font-size: 1rem
+  }
+  .reg-tournament__rating .rating__item {
+    width: 1rem
+  }
+  .reg-tournament__rating .rating__item {
+    height: 1rem
+  }
+  .reg-tournament__rating .rating__item {
+    flex-basis: 1rem
+  }
+  .reg-tournament__button {
+    font-size: 1rem
+  }
+  .reg-tournament__actions {
+    padding: 0 4.625rem
+  }
+  .reg-tournament__link {
+    font-size: 1.25rem
+  }
+  .profile__hero {
+    grid-template-columns: 300fr 370fr
+  }
+  .profile__hero .hero-tournament__info {
+    gap: .625rem;
+    padding-bottom: .875rem
+  }
 }
 @media (min-width:61.99875em) {
   .item-team-home__team-rating .rating__item {
@@ -2347,7 +2736,25 @@ body::after {
   .tournament__hero:not(:last-child),
   .tournament__players:not(:last-child),
   .tournament__price:not(:last-child),
+  .tournament__reg:not(:last-child),
   .tournament__schedule:not(:last-child) {
+    margin-bottom: 3.125rem
+  }
+  .profile__hero:not(:last-child),
+  .profile__players:not(:last-child),
+  .profile__teams:not(:last-child) {
+    margin-bottom: 3.125rem
+  }
+  .teams-profile__items:not(:last-child) {
+    margin-bottom: 3.125rem
+  }
+  .account__hero:not(:last-child) {
+    margin-bottom: 3.125rem
+  }
+  .account__rating-set:not(:last-child) {
+    margin-bottom: 3.125rem
+  }
+  .account__data:not(:last-child) {
     margin-bottom: 3.125rem
   }
 }
@@ -2408,6 +2815,27 @@ body::after {
   }
   .schedule-tournament--super .schedule-tournament__colors span {
     min-width: .5rem
+  }
+  .reg-tournament__item::before {
+    font-size: .625rem
+  }
+  .reg-tournament__label {
+    font-size: .625rem
+  }
+  .reg-tournament__rating .rating__item {
+    width: .4375rem
+  }
+  .reg-tournament__rating .rating__item {
+    height: .4375rem
+  }
+  .reg-tournament__rating .rating__item {
+    flex-basis: .4375rem
+  }
+  .reg-tournament__button {
+    font-size: .5rem
+  }
+  .reg-tournament__link {
+    font-size: .75rem
   }
 }
 @media (max-width:61.99875em) {
@@ -2588,6 +3016,9 @@ body::after {
   .video-section__video:not(:last-child) {
     margin-bottom: 1rem
   }
+  .schedule__filter:not(:last-child) {
+    margin-bottom: 1rem
+  }
   .team-setup__footer {
     flex-wrap: wrap;
     justify-content: center
@@ -2657,6 +3088,13 @@ body::after {
   .hero-tournament__location:not(:last-child) {
     margin-bottom: 1.25rem
   }
+  .hero-tournament__image {
+    max-width: 24.125rem;
+    margin: 0 auto
+  }
+  .hero-tournament__image:not(:last-child) {
+    margin-bottom: 1.1875rem
+  }
   .players-tournament__items:not(:last-child) {
     margin-bottom: 1rem
   }
@@ -2667,6 +3105,12 @@ body::after {
   .players-tournament__empty span {
     font-size: .6875rem;
     padding: 0
+  }
+  .reg-tournament__body:not(:last-child) {
+    margin-bottom: 1rem
+  }
+  .account__hero {
+    gap: 1.875rem
   }
 }
 @media (max-width:47.99875em)and (max-width:47.99875em) {
@@ -2680,6 +3124,10 @@ body::after {
   }
 }
 @media (max-width:37.49875em) {
+  .input {
+    font-size: .75rem;
+    padding: .75rem
+  }
   .protocol__block {
     gap: .625rem
   }
@@ -2709,6 +3157,27 @@ body::after {
   .item-team-home__member {
     gap: .3125rem
   }
+  .reg-tournament__item::before {
+    padding: .4375rem;
+    min-width: 1.25rem
+  }
+  .reg-tournament__label {
+    padding: .4375rem .625rem
+  }
+  .reg-tournament__rating {
+    padding: .3125rem .28125rem
+  }
+  .reg-tournament__button {
+    padding: .3125rem .28125rem
+  }
+  .teams-profile__item .rating__item {
+    width: .5rem;
+    height: .5rem;
+    flex-basis: .5rem
+  }
+  .account__label {
+    font-size: .625rem
+  }
 }
 @media (max-width:34.99875em) {
   .calendar-section__block:not(:last-child) {
@@ -2719,8 +3188,14 @@ body::after {
   .calendar-section__items {
     grid-template-columns: repeat(5,1fr)
   }
+  .schedule__item {
+    flex-grow: 1
+  }
 }
 @media (max-width:31.24875em) {
+  .filter-block__link {
+    font-size: .75rem
+  }
   .archive__items {
     gap: 1rem .375rem
   }
@@ -2804,6 +3279,75 @@ body::after {
     padding: .05rem;
     gap: .05rem
   }
+  .teams-profile__items {
+    gap: .25rem
+  }
+  .teams-profile__item {
+    padding: .5375rem .2375rem;
+    gap: .25rem
+  }
+  .teams-profile__item .team-card__name {
+    font-size: .8125rem
+  }
+  .teams-profile__item .team-card__name:not(:last-child) {
+    margin-bottom: .25rem
+  }
+  .teams-profile__item .team-card__label {
+    font-size: .8125rem
+  }
+  .teams-profile__setup .team-card {
+    margin: 0 1.6875rem
+  }
+  .teams-profile__setup .team-card {
+    padding: 1.5rem 1.75rem
+  }
+  .teams-profile__setup .team-card:not(:last-child) {
+    margin-bottom: .625rem
+  }
+  .teams-profile__button {
+    font-size: .875rem
+  }
+  .teams-profile__button:not(:last-child) {
+    margin-bottom: .25rem
+  }
+  .account__hero {
+    grid-template-columns: 1fr;
+    gap: 1rem
+  }
+  .account__upload {
+    max-width: 18.75rem;
+    margin: 0 auto;
+    font-size: 1.125rem
+  }
+  .account__body {
+    gap: 1rem
+  }
+  .account__date {
+    gap: .3125rem
+  }
+  .account__date .input {
+    text-align: left
+  }
+  .account__rating .rating__item {
+    width: 1.75rem;
+    height: 1.75rem;
+    flex-basis: 1.75rem
+  }
+  .account__data {
+    grid-template-columns: 1fr;
+    gap: 1rem
+  }
+  .account__button {
+    font-size: .75rem
+  }
+  .account__rating-block {
+    gap: .375rem;
+    padding-bottom: .5rem;
+    border-bottom: .0625rem solid rgba(10,38,64,.1)
+  }
+  .account__rating-block:not(:last-child) {
+    margin-bottom: 1.25rem
+  }
 }
 @media (max-width:28.12375em) {
   .table-section__table td span,
@@ -2850,6 +3394,9 @@ body::after {
     flex-basis: 2.875rem;
     font-size: 2rem;
     border-width: .07225rem
+  }
+  .reg-tournament__link {
+    padding: .625rem .9375rem
   }
 }
 @media (max-width:27.5em) {
@@ -2901,7 +3448,25 @@ body::after {
   .tournament__hero:not(:last-child),
   .tournament__players:not(:last-child),
   .tournament__price:not(:last-child),
+  .tournament__reg:not(:last-child),
   .tournament__schedule:not(:last-child) {
+    margin-bottom: 2rem
+  }
+  .profile__hero:not(:last-child),
+  .profile__players:not(:last-child),
+  .profile__teams:not(:last-child) {
+    margin-bottom: 2rem
+  }
+  .teams-profile__items:not(:last-child) {
+    margin-bottom: 2rem
+  }
+  .account__hero:not(:last-child) {
+    margin-bottom: 1rem
+  }
+  .account__rating-set:not(:last-child) {
+    margin-bottom: 2rem
+  }
+  .account__data:not(:last-child) {
     margin-bottom: 2rem
   }
 }
@@ -3033,6 +3598,9 @@ body::after {
   .item-bid__link::before {
     font-size: .6875rem
   }
+  .schedule__items {
+    gap: .625rem
+  }
   .team-setup__name {
     gap: .5rem
   }
@@ -3085,6 +3653,9 @@ body::after {
   .hero-tournament__label--small {
     font-size: .625rem
   }
+  .hero-tournament__label--big {
+    font-size: 1.125rem
+  }
   .hero-tournament__rating .rating__item {
     width: 1.8125rem;
     height: 1.8125rem;
@@ -3115,13 +3686,45 @@ body::after {
     flex-basis: 5.8125rem;
     gap: .125rem
   }
-  .players-tournament__offer-btn {
+  .players-tournament__label {
     padding: .2125rem .1875rem;
     border-radius: .20625rem;
     font-size: .375rem
   }
+  .players-tournament__info-item {
+    font-size: .5rem
+  }
   .price-tournament__item span {
     font-size: .6875rem
+  }
+  .reg-tournament__item {
+    padding-left: .25rem
+  }
+  .reg-tournament__item::after {
+    width: .125rem
+  }
+  .profile__hero .hero-tournament__info .hero-tournament__rating .rating__item {
+    width: 1.625rem;
+    height: 1.625rem;
+    flex-basis: 1.625rem
+  }
+  .teams-profile__item .team-card__name {
+    font-size: .5625rem
+  }
+  .teams-profile__item .team-card__label {
+    font-size: .4375rem
+  }
+  .teams-profile__item .team-card__logo {
+    max-width: 4.8125rem
+  }
+  .teams-profile__setup .team-card__name {
+    font-size: .5625rem
+  }
+  .teams-profile__setup .team-card__logo {
+    max-width: 4.8125rem
+  }
+  .account__field {
+    gap: .125rem
   }
 }
 @media (min-width:27.5em)and (max-width:85.125em) {
@@ -3271,6 +3874,7 @@ body::after {
     .tournament__hero:not(:last-child),
     .tournament__players:not(:last-child),
     .tournament__price:not(:last-child),
+    .tournament__reg:not(:last-child),
     .tournament__schedule:not(:last-child) {
       margin-bottom: clamp(2rem ,1.4631236443rem + 1.9522776573vw ,3.125rem)
     }
@@ -3279,7 +3883,62 @@ body::after {
     .tournament__hero:not(:last-child),
     .tournament__players:not(:last-child),
     .tournament__price:not(:last-child),
+    .tournament__reg:not(:last-child),
     .tournament__schedule:not(:last-child) {
+      margin-bottom: calc(2rem + 1.125*(100vw - 27.5rem)/ 57.625)
+    }
+  }
+  @supports (margin-bottom:clamp(2rem ,1.4631236443rem + 1.9522776573vw ,3.125rem)) {
+    .profile__hero:not(:last-child),
+    .profile__players:not(:last-child),
+    .profile__teams:not(:last-child) {
+      margin-bottom: clamp(2rem ,1.4631236443rem + 1.9522776573vw ,3.125rem)
+    }
+  }
+  @supports not (margin-bottom:clamp(2rem ,1.4631236443rem + 1.9522776573vw ,3.125rem)) {
+    .profile__hero:not(:last-child),
+    .profile__players:not(:last-child),
+    .profile__teams:not(:last-child) {
+      margin-bottom: calc(2rem + 1.125*(100vw - 27.5rem)/ 57.625)
+    }
+  }
+  @supports (margin-bottom:clamp(2rem ,1.4631236443rem + 1.9522776573vw ,3.125rem)) {
+    .teams-profile__items:not(:last-child) {
+      margin-bottom: clamp(2rem ,1.4631236443rem + 1.9522776573vw ,3.125rem)
+    }
+  }
+  @supports not (margin-bottom:clamp(2rem ,1.4631236443rem + 1.9522776573vw ,3.125rem)) {
+    .teams-profile__items:not(:last-child) {
+      margin-bottom: calc(2rem + 1.125*(100vw - 27.5rem)/ 57.625)
+    }
+  }
+  @supports (margin-bottom:clamp(1rem ,-0.0140997831rem + 3.6876355748vw ,3.125rem)) {
+    .account__hero:not(:last-child) {
+      margin-bottom: clamp(1rem ,-.0140997831rem + 3.6876355748vw ,3.125rem)
+    }
+  }
+  @supports not (margin-bottom:clamp(1rem ,-0.0140997831rem + 3.6876355748vw ,3.125rem)) {
+    .account__hero:not(:last-child) {
+      margin-bottom: calc(1rem + 2.125*(100vw - 27.5rem)/ 57.625)
+    }
+  }
+  @supports (margin-bottom:clamp(2rem ,1.4631236443rem + 1.9522776573vw ,3.125rem)) {
+    .account__rating-set:not(:last-child) {
+      margin-bottom: clamp(2rem ,1.4631236443rem + 1.9522776573vw ,3.125rem)
+    }
+  }
+  @supports not (margin-bottom:clamp(2rem ,1.4631236443rem + 1.9522776573vw ,3.125rem)) {
+    .account__rating-set:not(:last-child) {
+      margin-bottom: calc(2rem + 1.125*(100vw - 27.5rem)/ 57.625)
+    }
+  }
+  @supports (margin-bottom:clamp(2rem ,1.4631236443rem + 1.9522776573vw ,3.125rem)) {
+    .account__data:not(:last-child) {
+      margin-bottom: clamp(2rem ,1.4631236443rem + 1.9522776573vw ,3.125rem)
+    }
+  }
+  @supports not (margin-bottom:clamp(2rem ,1.4631236443rem + 1.9522776573vw ,3.125rem)) {
+    .account__data:not(:last-child) {
       margin-bottom: calc(2rem + 1.125*(100vw - 27.5rem)/ 57.625)
     }
   }
@@ -3473,6 +4132,76 @@ body::after {
       min-width: calc(.5rem + .875*(100vw - 20rem)/ 27.99875)
     }
   }
+  @supports (font-size:clamp(0.625rem ,0.3571308987rem + 1.3393455065vw ,1rem)) {
+    .reg-tournament__item::before {
+      font-size: clamp(.625rem ,.3571308987rem + 1.3393455065vw ,1rem)
+    }
+  }
+  @supports not (font-size:clamp(0.625rem ,0.3571308987rem + 1.3393455065vw ,1rem)) {
+    .reg-tournament__item::before {
+      font-size: calc(.625rem + .375*(100vw - 20rem)/ 27.99875)
+    }
+  }
+  @supports (font-size:clamp(0.625rem ,0.3571308987rem + 1.3393455065vw ,1rem)) {
+    .reg-tournament__label {
+      font-size: clamp(.625rem ,.3571308987rem + 1.3393455065vw ,1rem)
+    }
+  }
+  @supports not (font-size:clamp(0.625rem ,0.3571308987rem + 1.3393455065vw ,1rem)) {
+    .reg-tournament__label {
+      font-size: calc(.625rem + .375*(100vw - 20rem)/ 27.99875)
+    }
+  }
+  @supports (width:clamp(0.4375rem ,0.0356963481rem + 2.0090182597vw ,1rem)) {
+    .reg-tournament__rating .rating__item {
+      width: clamp(.4375rem ,.0356963481rem + 2.0090182597vw ,1rem)
+    }
+  }
+  @supports not (width:clamp(0.4375rem ,0.0356963481rem + 2.0090182597vw ,1rem)) {
+    .reg-tournament__rating .rating__item {
+      width: calc(.4375rem + .5625*(100vw - 20rem)/ 27.99875)
+    }
+  }
+  @supports (height:clamp(0.4375rem ,0.0356963481rem + 2.0090182597vw ,1rem)) {
+    .reg-tournament__rating .rating__item {
+      height: clamp(.4375rem ,.0356963481rem + 2.0090182597vw ,1rem)
+    }
+  }
+  @supports not (height:clamp(0.4375rem ,0.0356963481rem + 2.0090182597vw ,1rem)) {
+    .reg-tournament__rating .rating__item {
+      height: calc(.4375rem + .5625*(100vw - 20rem)/ 27.99875)
+    }
+  }
+  @supports (flex-basis:clamp(0.4375rem ,0.0356963481rem + 2.0090182597vw ,1rem)) {
+    .reg-tournament__rating .rating__item {
+      flex-basis: clamp(.4375rem ,.0356963481rem + 2.0090182597vw ,1rem)
+    }
+  }
+  @supports not (flex-basis:clamp(0.4375rem ,0.0356963481rem + 2.0090182597vw ,1rem)) {
+    .reg-tournament__rating .rating__item {
+      flex-basis: calc(.4375rem + .5625*(100vw - 20rem)/ 27.99875)
+    }
+  }
+  @supports (font-size:clamp(0.5rem ,0.1428411983rem + 1.7857940087vw ,1rem)) {
+    .reg-tournament__button {
+      font-size: clamp(.5rem ,.1428411983rem + 1.7857940087vw ,1rem)
+    }
+  }
+  @supports not (font-size:clamp(0.5rem ,0.1428411983rem + 1.7857940087vw ,1rem)) {
+    .reg-tournament__button {
+      font-size: calc(.5rem + .5*(100vw - 20rem)/ 27.99875)
+    }
+  }
+  @supports (font-size:clamp(0.75rem ,0.3928411983rem + 1.7857940087vw ,1.25rem)) {
+    .reg-tournament__link {
+      font-size: clamp(.75rem ,.3928411983rem + 1.7857940087vw ,1.25rem)
+    }
+  }
+  @supports not (font-size:clamp(0.75rem ,0.3928411983rem + 1.7857940087vw ,1.25rem)) {
+    .reg-tournament__link {
+      font-size: calc(.75rem + .5*(100vw - 20rem)/ 27.99875)
+    }
+  }
 }
 @media (min-width:20em)and (max-width:61.99875em) {
   @supports (width:clamp(0.4375rem ,0.0803465133rem + 1.7857674336vw ,1.1875rem)) {
@@ -3561,11 +4290,17 @@ body::after {
   .cities__item:hover {
     background-color: #fafafa
   }
+  .team-card:not(div):hover {
+    background-color: #c2c2c2
+  }
   .latest-series__empty:hover {
     background-color: #c9c9c9
   }
-  .players-tournament__offer-btn:hover {
+  .players-tournament__label:not(div):hover {
     background-color: #0053a0;
     color: #fff
+  }
+  .account__upload:hover {
+    background-color: #c2c2c2
   }
 }

@@ -2,7 +2,7 @@
 <html lang="uk">
 
 <head>
-	<title>Міста</title>
+	<title>Акаунт</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<link rel="stylesheet" href="css/style.min.css?_v=20250114013137">
@@ -124,41 +124,114 @@
 			</div>
 			<div class="page__container">
 				<div class="page__wrapper">
-					<div class="page__cities cities">
-						<div class="cities__block _block">
-							<div class="cities__items">
-								<a href="#" class="cities__item">
-									<div class="cities__image">
-										<img src="img/cities/01.webp" class="ibg ibg--contain" alt="Image">
+					<div class="page__account account">
+						<div class="account__block _block">
+							<div class="account__hero">
+								<div class="account__field">
+									<div class="account__label ">
+										ФОТО
 									</div>
-									<div class="cities__label">
-										ВІННИЦЯ
+									<label class="account__upload upload-btn">
+										<input type="file" name="logo" accept="image.webp, image.webp, image/svg+xml" />
+										ДОДАТИ <br> ФОТО
+									</label>
+								</div>
+								<div class="account__body">
+									<div class="account__field">
+										<div class="account__label ">Прізвище</div>
+										<input type="text" value="МАМЕДОВ" name="last-name" class="account__input input">
 									</div>
-								</a>
-								<a href="#" class="cities__item">
-									<div class="cities__image">
-										<img src="img/cities/02.webp" class="ibg ibg--contain" alt="Image">
+									<div class="account__field">
+										<div class="account__label ">ІМ’Я</div>
+										<input type="text" value="МАКСИМ" name="first-name" class="account__input input">
 									</div>
-									<div class="cities__label">
-										ДНІПРО
+									<div class="account__field">
+										<div class="account__label ">ДАТА НАРОДЖЕННЯ</div>
+										<div class="account__date">
+											<input type="text" value="14" name="day" class="account__input input">
+											<input type="text" value="СІЧ" name="month" class="account__input input">
+											<input type="text" value="1988" name="year" class="account__input input">
+										</div>
 									</div>
-								</a>
-								<a href="#" class="cities__item">
-									<div class="cities__image">
-										<img src="img/cities/03.webp" class="ibg ibg--contain" alt="Image">
+								</div>
+							</div>
+							<div class="account__rating-set">
+								<div class="account__rating-block">
+									<div class="account__label label-acount">
+										*ОБРАТИ СВІЙ РІВЕНЬ
 									</div>
-									<div class="cities__label">
-										ЗАПОРІЖЖЯ
+									<div data-rating="set" data-rating-size="10" data-rating-value="1" class="account__rating rating">
+
 									</div>
-								</a>
-								<a href="#" class="cities__item _active">
-									<div class="cities__image">
-										<img src="img/cities/04.webp" class="ibg ibg--contain" alt="Image">
+								</div>
+							</div>
+							<div class="account__data">
+								<div class="account__field">
+									<div class="account__label ">
+										НОМЕР ТЕЛЕФОНУ
 									</div>
-									<div class="cities__label">
-										КИЇВ
+									<input type="text" value="+380" name="phone" class="account__input input">
+								</div>
+								<div class="account__field">
+									<div class="account__label ">
+										ПАРОЛЬ
 									</div>
-								</a>
+									<input type="text" value="453GPR@53" name="password" class="account__input input">
+								</div>
+								<div class="account__field">
+									<div class="account__label ">
+										НІКНЕЙМ В TELEGRAM
+									</div>
+									<input type="text" value="@MAMEDOV1988" name="tg" class="account__input input">
+								</div>
+								<div class="account__field">
+									<div class="account__label ">
+										ПОВТОРНИЙ ПАРОЛЬ
+									</div>
+									<input type="text" value="453GPR@53" name="password-repeat" class="account__input input">
+								</div>
+								<div class="account__field">
+									<div class="account__label ">
+										НОМЕР КАРТКИ
+									</div>
+									<input type="text" value="3457 7543 4532 1753" name="card" class="account__input input">
+								</div>
+								<div class="account__card-col">
+									<div class="account__field">
+										<div class="account__label">ТЕРМІН ДІЇ</div>
+										<input type="text" value="07/12" name="card-exp-date" class="account__input input">
+									</div>
+									<div class="account__field">
+										<div class="account__label">CVV</div>
+										<input type="text" value="456" name="cvv" class="account__input input">
+									</div>
+								</div>
+								<button class="account__button button button--green">
+									<span>СТВОРИТИ КАБІНЕТ ГРАВЦЯ</span>
+								</button>
+							</div>
+							<div class="account__rating-info">
+								<h2 class="account__title section-title section-title--margin">
+									*ПРИБЛИЗНИЙ РІВЕНЬ ГРАВЦІВ ВІД 1 ДО 10
+								</h2>
+								<div class="account__rating-block">
+									<div class="account__label">ГРАВ ДЕКІЛЬКА РАЗ В ЖИТТІ</div>
+									<div data-rating data-rating-size="10" data-rating-value="1" class="account__rating rating">
+
+									</div>
+								</div>
+								<div class="account__rating-block">
+									<div class="account__label">ГРАЮ 1-2 РАЗИ НА РІК</div>
+									<div data-rating data-rating-size="10" data-rating-value="2" class="account__rating rating">
+
+									</div>
+								</div>
+								<div class="account__rating-block">
+									<div class="account__label">ГРАЮ 1-2 РАЗИ НА МІСЯЦЬ</div>
+									<div data-rating data-rating-size="10" data-rating-value="3" class="account__rating rating">
+
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
