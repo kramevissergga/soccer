@@ -5,7 +5,7 @@
 	<title>Турнір</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
-	<link rel="stylesheet" href="css/style.min.css?_v=20250114013137">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250311124509">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
@@ -38,30 +38,15 @@
 						<a href="#" class="header__link button button--transparent _icon-user-add">
 							<span>Реєстрація</span>
 						</a>
-						<a href="#" class="header__link button button--transparent _icon-user-circle">
-							<span>Профіль</span>
-						</a>
 					</div>
 				</div>
-				<div class="header__actions">
-					<div class="header__profile profile-header">
-						<div class="profile-header__image">
-							<img src="img/header/profile.webp" alt="Image" class="ibg">
-						</div>
-						<div class="profile-header__label">
-							0.00 грн
-						</div>
-						<button class="profile-header__add _icon-add-circle">
-						</button>
-					</div>
-					<div class="header__contacts">
-						<a href="#" class="header__phone">+38(093) 431 94 92</a>
-						<div class="header__social social">
-							<a href="#" class="social__item _icon-s-fb">
-							</a>
-							<a href="#" class="social__item _icon-s-inst">
-							</a>
-						</div>
+				<div class="header__contacts">
+					<a href="#" class="header__phone">+38(093) 431 94 92</a>
+					<div class="header__social social">
+						<a href="#" class="social__item _icon-s-fb">
+						</a>
+						<a href="#" class="social__item _icon-s-inst">
+						</a>
 					</div>
 				</div>
 			</div>
@@ -69,11 +54,6 @@
 		<main class="page">
 			<div class="page__nav nav">
 				<div class="nav__container">
-					<div class="nav__images">
-						<img src="img/navigation/01.webp" alt="Image" class="ibg ibg--contain">
-						<img src="img/navigation/02.webp" alt="Image" class="ibg ibg--contain">
-						<img src="img/navigation/03.webp" alt="Image" class="ibg ibg--contain">
-					</div>
 					<div data-simplebar class="nav__body">
 						<ul class="nav__list">
 							<!--Активному пукнту додати клас _active-->
@@ -700,6 +680,59 @@
 									ЗАЯВИТИ КОМАНДУ
 								</h2>
 								<div class="reg-tournament__body">
+									<div style="--color: #F7E10E" class="reg-tournament__item reg-tournament__item--join">
+										<div class="reg-tournament__label">
+											ПЕРУН
+										</div>
+										<div style="--color: #FFF" class="reg-tournament__rating">
+											<div data-rating data-rating-size="10" data-rating-value="8" class="rating">
+											</div>
+										</div>
+										<div style="--color: #ed1c24" class="reg-tournament__status">
+											<span>Заявка закрита</span>
+										</div>
+									</div>
+									<div style="--color: #1B5BA2" class="reg-tournament__item reg-tournament__item--join">
+										<div class="reg-tournament__label">
+											AFC SPARTA
+										</div>
+										<div style="--color: #FFF" class="reg-tournament__rating">
+											<div data-rating data-rating-size="10" data-rating-value="8" class="rating">
+											</div>
+										</div>
+										<div style="--color: #b5e61d" class="reg-tournament__status">
+											<span>Потрібні гравці</span>
+										</div>
+										<button class="reg-tournament__button button button--yellow">
+											Хочу грати
+										</button>
+									</div>
+									<div style="--color: #59C65D" class="reg-tournament__item reg-tournament__item--join">
+										<div class="reg-tournament__label">
+											ДНІПРО
+										</div>
+										<div style="--color: #FFF" class="reg-tournament__rating">
+											<div data-rating data-rating-size="10" data-rating-value="8" class="rating">
+											</div>
+										</div>
+										<div style="--color: #22b14c" class="reg-tournament__status">
+											<span>Терміново потрібні гравці</span>
+										</div>
+										<button class="reg-tournament__button button button--yellow">
+											Хочу грати
+										</button>
+									</div>
+								</div>
+								<div class="reg-tournament__actions">
+									<a href="#" class="reg-tournament__link button button--yellow"><span>ЗАЯВИТИ КОМАНДУ</span></a>
+									<a href="#" class="reg-tournament__link button button--yellow"><span>АНКЕТА ГРАВЦЯ</span></a>
+								</div>
+							</section>
+							<section class="tournament__reg-view reg-tournament">
+								<h2 class="reg-tournament__title section-title section-title--margin">
+									ЗАЯВЛЕНІ КОМАНДИ
+								</h2>
+								<div class="reg-tournament__body">
 									<div style="--color: #F7E10E" class="reg-tournament__item">
 										<div class="reg-tournament__label">
 											ПЕРУН
@@ -708,9 +741,6 @@
 											<div data-rating data-rating-size="10" data-rating-value="8" class="rating">
 											</div>
 										</div>
-										<button class="reg-tournament__button button button--blue">
-											<span>ЗАЯВИТИСЬ НА ТУРНІР</span>
-										</button>
 									</div>
 									<div style="--color: #1B5BA2" class="reg-tournament__item">
 										<div class="reg-tournament__label">
@@ -720,9 +750,6 @@
 											<div data-rating data-rating-size="10" data-rating-value="8" class="rating">
 											</div>
 										</div>
-										<button class="reg-tournament__button button button--blue">
-											<span>ЗАЯВИТИСЬ НА ТУРНІР</span>
-										</button>
 									</div>
 									<div style="--color: #59C65D" class="reg-tournament__item">
 										<div class="reg-tournament__label">
@@ -732,179 +759,77 @@
 											<div data-rating data-rating-size="10" data-rating-value="8" class="rating">
 											</div>
 										</div>
-										<button class="reg-tournament__button button button--blue">
-											<span>ЗАЯВИТИСЬ НА ТУРНІР</span>
-										</button>
 									</div>
 								</div>
-								<div class="reg-tournament__actions">
-									<a href="#" class="reg-tournament__link button button--yellow"><span>ЗАЯВИТИ КОМАНДУ</span></a>
-									<a href="#" class="reg-tournament__link button button--yellow"><span>АНКЕТА ГРАВЦЯ</span></a>
-								</div>
 							</section>
-							<section class="tournament__players players-tournament ">
-								<h2 class="players-tournament__title section-title section-title--margin">
-									Гравців зареєстровано
+							<section class="tournament__join-team join-team">
+								<h2 class="join-team__title section-title section-title--margin">
+									Заявити команду
 								</h2>
-								<div class="players-tournament__items">
-									<div class="players-tournament__item">
-										<article class="item-player item-player--stats">
-											<a href="#" class="item-player__image-link">
-												<img src="img/player/player.webp" alt="Image" class="ibg">
-											</a>
-											<div class="item-player__name">
-												<a href="#">МАКСИМ МАМЕДОВ</a>
-											</div>
-											<div data-rating data-rating-size="10" data-rating-value="8" class="item-player__rating rating">
-											</div>
-										</article>
-										<button class="players-tournament__label gray-bg">ВІДРАВИТИ ЗАПРОШЕННЯ</button>
+								<div class="join-team__team-setup team-setup">
+									<div class="team-setup__name">
+										<div class="team-setup__label team-setup__label--big">
+											НАЗВА КОМАНДИ
+										</div>
+										<input type="text" value="SOBORNA TEAM" name="name" class="team-setup__input">
 									</div>
-									<div class="players-tournament__item">
-										<article class="item-player item-player--stats">
-											<a href="#" class="item-player__image-link">
-												<img src="img/player/player.webp" alt="Image" class="ibg">
-											</a>
-											<div class="item-player__name">
-												<a href="#">МАКСИМ МАМЕДОВ</a>
-											</div>
-											<div data-rating data-rating-size="10" data-rating-value="8" class="item-player__rating rating">
-											</div>
-										</article>
-										<button class="players-tournament__label gray-bg">ВІДРАВИТИ ЗАПРОШЕННЯ</button>
+									<div class="team-setup__logo">
+										<div class="team-setup__image">
+											<img src="img/header/logo.svg" alt="Logo" class="ibg ibg--contain">
+										</div>
+										<label class="team-setup__upload button button--blue upload-btn">
+											<input type="file" name="logo" accept="image.webp, image.webp, image/svg+xml" />
+											<span>Завантажити ЛОГОТИП</span>
+										</label>
 									</div>
-									<div class="players-tournament__item">
-										<article class="item-player item-player--stats">
-											<a href="#" class="item-player__image-link">
-												<img src="img/player/player.webp" alt="Image" class="ibg">
-											</a>
-											<div class="item-player__name">
-												<a href="#">МАКСИМ МАМЕДОВ</a>
+									<div class="team-setup__footer">
+										<div class="team-setup__field">
+											<div class="team-setup__label">
+												ВИБРАТИ КОЛІР КОМАНДИ
 											</div>
-											<div data-rating data-rating-size="10" data-rating-value="8" class="item-player__rating rating">
+											<div class="team-setup__colors">
+												<label style="--color: #8593a0" class="team-setup__color">
+													<input disabled type="radio" name="team-color">
+												</label>
+												<label style="--color: #FF3B3B" class="team-setup__color">
+													<input type="radio" name="team-color">
+												</label>
+												<label style="--color: #59C65D" class="team-setup__color">
+													<input type="radio" name="team-color">
+												</label>
+												<label style="--color: #1B5BA2" class="team-setup__color">
+													<input disabled type="radio" name="team-color">
+												</label>
+												<label style="--color: #F7E10E" class="team-setup__color">
+													<input disabled type="radio" name="team-color">
+												</label>
+												<label style="--color: #FF7F27" class="team-setup__color">
+													<input type="radio" name="team-color">
+												</label>
 											</div>
-										</article>
-										<button class="players-tournament__label gray-bg">ВІДРАВИТИ ЗАПРОШЕННЯ</button>
+										</div>
+										<div class="team-setup__field">
+											<div class="team-setup__label">
+												ПРОМОКОД
+											</div>
+											<div class="team-setup__code-input input-code">
+												<input type="text" maxlength="1" />
+												<input type="text" maxlength="1" />
+												<input type="text" maxlength="1" />
+												<input type="text" maxlength="1" />
+											</div>
+										</div>
+										<div class="team-setup__field">
+											<div class="team-setup__label">
+												ВНЕСОК: <span>650 ГРН</span>
+											</div>
+											<button type="button" class="team-setup__pay-button button button--blue">
+												Оплатити внесок
+											</button>
+										</div>
 									</div>
-									<div class="players-tournament__item">
-										<article class="item-player item-player--stats">
-											<a href="#" class="item-player__image-link">
-												<img src="img/player/player.webp" alt="Image" class="ibg">
-											</a>
-											<div class="item-player__name">
-												<a href="#">МАКСИМ МАМЕДОВ</a>
-											</div>
-											<div data-rating data-rating-size="10" data-rating-value="8" class="item-player__rating rating">
-											</div>
-										</article>
-										<button class="players-tournament__label gray-bg">ВІДРАВИТИ ЗАПРОШЕННЯ</button>
-									</div>
-									<div class="players-tournament__item">
-										<article class="item-player item-player--stats">
-											<a href="#" class="item-player__image-link">
-												<img src="img/player/player.webp" alt="Image" class="ibg">
-											</a>
-											<div class="item-player__name">
-												<a href="#">МАКСИМ МАМЕДОВ</a>
-											</div>
-											<div data-rating data-rating-size="10" data-rating-value="8" class="item-player__rating rating">
-											</div>
-										</article>
-										<button class="players-tournament__label gray-bg">ВІДРАВИТИ ЗАПРОШЕННЯ</button>
-									</div>
-									<div class="players-tournament__item">
-										<article class="item-player item-player--stats">
-											<a href="#" class="item-player__image-link">
-												<img src="img/player/player.webp" alt="Image" class="ibg">
-											</a>
-											<div class="item-player__name">
-												<a href="#">МАКСИМ МАМЕДОВ</a>
-											</div>
-											<div data-rating data-rating-size="10" data-rating-value="8" class="item-player__rating rating">
-											</div>
-										</article>
-										<button class="players-tournament__label gray-bg">ВІДРАВИТИ ЗАПРОШЕННЯ</button>
-									</div>
-									<div class="players-tournament__item">
-										<article class="item-player item-player--stats">
-											<a href="#" class="item-player__image-link">
-												<img src="img/player/player.webp" alt="Image" class="ibg">
-											</a>
-											<div class="item-player__name">
-												<a href="#">МАКСИМ МАМЕДОВ</a>
-											</div>
-											<div data-rating data-rating-size="10" data-rating-value="8" class="item-player__rating rating">
-											</div>
-										</article>
-										<button class="players-tournament__label gray-bg">ВІДРАВИТИ ЗАПРОШЕННЯ</button>
-									</div>
-									<div class="players-tournament__item">
-										<article class="item-player item-player--stats">
-											<a href="#" class="item-player__image-link">
-												<img src="img/player/player.webp" alt="Image" class="ibg">
-											</a>
-											<div class="item-player__name">
-												<a href="#">МАКСИМ МАМЕДОВ</a>
-											</div>
-											<div data-rating data-rating-size="10" data-rating-value="8" class="item-player__rating rating">
-											</div>
-										</article>
-										<button class="players-tournament__label gray-bg">ВІДРАВИТИ ЗАПРОШЕННЯ</button>
-									</div>
-									<div class="players-tournament__item">
-										<article class="item-player item-player--stats">
-											<a href="#" class="item-player__image-link">
-												<img src="img/player/player.webp" alt="Image" class="ibg">
-											</a>
-											<div class="item-player__name">
-												<a href="#">МАКСИМ МАМЕДОВ</a>
-											</div>
-											<div data-rating data-rating-size="10" data-rating-value="8" class="item-player__rating rating">
-											</div>
-										</article>
-										<button class="players-tournament__label gray-bg">ВІДРАВИТИ ЗАПРОШЕННЯ</button>
-									</div>
-									<div class="players-tournament__item">
-										<article class="item-player item-player--stats">
-											<a href="#" class="item-player__image-link">
-												<img src="img/player/player.webp" alt="Image" class="ibg">
-											</a>
-											<div class="item-player__name">
-												<a href="#">МАКСИМ МАМЕДОВ</a>
-											</div>
-											<div data-rating data-rating-size="10" data-rating-value="8" class="item-player__rating rating">
-											</div>
-										</article>
-										<button class="players-tournament__label gray-bg">ВІДРАВИТИ ЗАПРОШЕННЯ</button>
-									</div>
-									<div class="players-tournament__item">
-										<article class="item-player item-player--stats">
-											<a href="#" class="item-player__image-link">
-												<img src="img/player/player.webp" alt="Image" class="ibg">
-											</a>
-											<div class="item-player__name">
-												<a href="#">МАКСИМ МАМЕДОВ</a>
-											</div>
-											<div data-rating data-rating-size="10" data-rating-value="8" class="item-player__rating rating">
-											</div>
-										</article>
-										<button class="players-tournament__label gray-bg">ВІДРАВИТИ ЗАПРОШЕННЯ</button>
-									</div>
-									<div class="players-tournament__item">
-										<article class="item-player item-player--stats">
-											<a href="#" class="item-player__image-link">
-												<img src="img/player/player.webp" alt="Image" class="ibg">
-											</a>
-											<div class="item-player__name">
-												<a href="#">МАКСИМ МАМЕДОВ</a>
-											</div>
-											<div data-rating data-rating-size="10" data-rating-value="8" class="item-player__rating rating">
-											</div>
-										</article>
-										<button class="players-tournament__label gray-bg">ВІДРАВИТИ ЗАПРОШЕННЯ</button>
-									</div>
+								</div>
 							</section>
-
 						</div>
 					</div>
 				</div>
@@ -916,10 +841,10 @@
 			</svg>
 		</button>
 	</div>
-	<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js?_v=20250114013137"></script>
-	<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js?_v=20250114013137"></script>
-	<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js?_v=20250114013137"></script>
-	<script src="js/app.min.js?_v=20250114013137"></script>
+	<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js?_v=20250311124509"></script>
+	<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js?_v=20250311124509"></script>
+	<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js?_v=20250311124509"></script>
+	<script src="js/app.min.js?_v=20250311124509"></script>
 </body>
 
 </html>
