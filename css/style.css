@@ -438,7 +438,7 @@ body::after {
   width: 100%;
   border-radius: .25rem;
   border: .0625rem solid rgba(10,38,64,.1);
-  background: #215967;
+  background: #00539f;
   padding: .5rem .875rem;
   text-align: center;
   transition: all .3s;
